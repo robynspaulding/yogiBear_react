@@ -1,14 +1,19 @@
 import { Header } from "./Header";
 import { Home } from "./Home";
 import { Footer } from "./Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { YogisShow } from "./assets/YogisShow";
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Header />
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/yogis/:id" element={<YogisShow />} />
+      </Routes>
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 export default App;

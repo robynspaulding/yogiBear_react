@@ -1,3 +1,6 @@
+import * as React from "react";
+import { Link } from "react-router-dom";
+
 export function YogisIndex(props) {
   return (
     <div>
@@ -8,11 +11,7 @@ export function YogisIndex(props) {
           {yogi.yoga_type} yoga <br />
           <img width="500" src={yogi.image} />
           <br />
-          <button
-          // onClick={} will link to Yogis Show page
-          >
-            Book with {yogi.name}
-          </button>
+          <Link to={`/yogis/${yogi.id}`}>More Info About {yogi.name}</Link>
         </div>
       ))}
     </div>
