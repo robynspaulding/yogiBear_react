@@ -6,6 +6,10 @@ export function YogisUpdate(props) {
     window.location.href = "/";
   };
 
+  const handleClick = () => {
+    props.onDestroyYogi(props.yogi);
+  };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -47,6 +51,8 @@ export function YogisUpdate(props) {
         </div>
 
         <button type="submit">Update {props.yogi.name}'s Info</button>
+        <br />
+        <button onClick={handleClick}>Delete {props.yogi.name}'s Profile</button>
       </form>
     </div>
   );

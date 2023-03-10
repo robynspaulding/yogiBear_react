@@ -17,7 +17,7 @@ export function YogisIndex(props) {
             <></>
           ) : (
             <>
-              <button onClick={() => props.onSelectYogi(yogi)}>Admin Update</button>
+              <button onClick={() => props.onSelectYogi(yogi)}>Admin Edit Actions</button>
             </>
           )}
         </div>

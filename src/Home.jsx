@@ -46,12 +46,20 @@ export function Home() {
     });
   };
 
+  const handleDestroyYogi = (yogi) => {
+    console.log("handleDestroyyogi", yogi);
+    axios.delete(`http://localhost:3000/yogis/${yogi.id}.json`).then((response) => {
+      setYogis(yogis.filter((y) => y.id !== yogi.id));
+      handleHideYogi();
+    });
+  };
+
   useEffect(handleIndexYogis, []);
   return (
     <div>
       <YogisIndex yogis={yogis} onSelectYogi={handleUpdateYogi} />
       <Modal show={isYogisUpdateVisible} onClose={handleHideYogi}>
-        <YogisUpdate yogi={currentYogi} onUpdateYogi={handleUpdateYogiInModal} />
+        <YogisUpdate yogi={currentYogi} onUpdateYogi={handleUpdateYogiInModal} onDestroyYogi={handleDestroyYogi} />
       </Modal>
     </div>
   );
