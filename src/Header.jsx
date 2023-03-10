@@ -4,7 +4,17 @@ export function Header() {
   return (
     <header>
       <nav>
-        <a href="/">Home</a> | <a href="/signup">Sign Up</a> | <a href="/login">Login</a> | <LogoutLink />
+        <a href="/">Home</a>
+        <br />
+        {localStorage.jwt === undefined ? (
+          <>
+            <a href="/signup">Sign Up</a> <br /> <a href="/login">Login</a>
+          </>
+        ) : (
+          <>
+            <LogoutLink />
+          </>
+        )}
       </nav>
     </header>
   );
