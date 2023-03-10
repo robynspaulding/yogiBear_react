@@ -11,7 +11,15 @@ export function YogisIndex(props) {
           {yogi.yoga_type} yoga <br />
           <img width="500" src={yogi.image} />
           <br />
-          <Link to={`/yogis/${yogi.id}`}>More Info About {yogi.name}</Link>
+          <Link to={`/yogis/${yogi.id}`}>See all of {yogi.name}'s Info</Link>
+          <br />
+          {localStorage.jwt === undefined ? (
+            <></>
+          ) : (
+            <>
+              <button onClick={() => props.onSelectYogi(yogi)}>Admin Update</button>
+            </>
+          )}
         </div>
       ))}
     </div>

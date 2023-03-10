@@ -2,7 +2,7 @@ import { Header } from "./Header";
 import { Home } from "./Home";
 import { Footer } from "./Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { YogisShow } from "./assets/YogisShow";
+import { YogisShow } from "./YogisShow";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
 

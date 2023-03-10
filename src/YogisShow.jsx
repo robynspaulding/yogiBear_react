@@ -14,6 +14,7 @@ export function YogisShow() {
   };
 
   useEffect(handleShowYogi, []);
+
   return (
     <div>
       <h1>Yogi Info</h1>
