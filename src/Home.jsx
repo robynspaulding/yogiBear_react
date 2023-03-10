@@ -3,6 +3,7 @@ import axios from "axios";
 import { YogisIndex } from "./YogisIndex";
 import { YogisUpdate } from "./YogisUpdate";
 import { Modal } from "./Modal";
+import { YogisNew } from "./YogisNew";
 
 export function Home() {
   const [yogis, setYogis] = useState([]);
@@ -48,7 +49,6 @@ export function Home() {
   useEffect(handleIndexYogis, []);
   return (
     <div>
-      <h1>Welcome to React!</h1>
       <YogisIndex yogis={yogis} onSelectYogi={handleUpdateYogi} />
       <Modal show={isYogisUpdateVisible} onClose={handleHideYogi}>
         <YogisUpdate yogi={currentYogi} onUpdateYogi={handleUpdateYogiInModal} />

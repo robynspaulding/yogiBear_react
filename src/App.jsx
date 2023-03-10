@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { YogisShow } from "./YogisShow";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
+import { YogisNew } from "./YogisNew";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/yogis/:id" element={<YogisShow />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/yogis/new" element={<YogisNew />} />
       </Routes>
       <Footer />
     </BrowserRouter>

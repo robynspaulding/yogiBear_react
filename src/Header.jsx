@@ -13,6 +13,8 @@ export function Header() {
         ) : (
           <>
             <LogoutLink />
+            <br />
+            <a href="/yogis/new">Admin: Add New Yogi</a>
           </>
         )}
       </nav>
