@@ -19,7 +19,7 @@ export function YogisShow() {
     <div>
       <h1>Yogi Info</h1>
       <h2>{yogi.name}</h2>
-      <img src={yogi.image} />
+      <img src={yogi.image} width="500px" />
       <p>{yogi.contact}</p>
       <p>{yogi.bio}</p>
       <p>Hourly Rate: {yogi.rate}</p>
