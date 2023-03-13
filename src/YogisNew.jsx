@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export function YogisNew(props) {
-  const handleCreateYogi = (params, successCallback) => {
+export function YogisNew() {
+  const handleCreateYogi = (params) => {
     console.log("handleCreateYogi", params);
     axios.post("http://localhost:3000/yogis.json", params).then((response) => {
       const newYogi = response.data;
@@ -19,7 +19,7 @@ export function YogisNew(props) {
 
   return (
     <div>
-      <h1>New Photo</h1>
+      <h1>New Yogi</h1>
       <form onSubmit={handleSubmit}>
         <div>
           Name: <input name="name" type="text" />

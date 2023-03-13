@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { BookingsNew } from "./BookingsNew";
 
 export function YogisShow() {
   const params = useParams();
@@ -33,6 +34,7 @@ export function YogisShow() {
         {yogi.available_start_time} - {yogi.available_end_time}
         <p>For alternate times please contact the Yogi directly</p>
       </p>
+      <BookingsNew />
     </div>
   );
 }
