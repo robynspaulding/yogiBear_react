@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Nav } from "react-bootstrap";
 
 export function LogoutLink() {
   const handleClick = (event) => {
@@ -9,8 +10,10 @@ export function LogoutLink() {
   };
 
   return (
-    <a href="#" onClick={handleClick}>
-      Logout
-    </a>
+    <Nav>
+      <Nav.Link href="/" onClick={handleClick}>
+        Logout
+      </Nav.Link>
+    </Nav>
   );
 }

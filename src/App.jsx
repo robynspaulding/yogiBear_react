@@ -7,6 +7,7 @@ import { Signup } from "./Signup";
 import { Login } from "./Login";
 import { YogisNew } from "./YogisNew";
 import { BookingsIndex } from "./BookingsIndex";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
