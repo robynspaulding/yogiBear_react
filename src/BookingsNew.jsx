@@ -28,7 +28,10 @@ export function BookingsNew(props) {
           <input name="yogi_id" type="hidden" defaultValue={idParams.id} />
         </div>
         <div>
-          Date: <input name="date" type="text" />
+          <input name="yogi_name" type="hidden" defaultValue={props.yogi.name} />
+        </div>
+        <div>
+          Date: <input name="date" type="text" placeholder="Date" />
         </div>
         <div>
           Start time: <input name="start_time" type="text" placeholder={props.yogi.available_start_time} />
@@ -40,13 +43,13 @@ export function BookingsNew(props) {
           Total: <input name="total_price" type="text" placeholder="rate * number of hours" />
         </div>
         <div>
-          Address: <input name="address" type="text" />
+          Address: <input name="address" type="text" placeholder="address of event" />
         </div>
         <div>
-          City: <input name="city" type="text" />
+          City: <input name="city" type="text" placeholder="City " />
         </div>
         <div>
-          State: <input name="state" type="text" />
+          State: <input name="state" type="text" placeholder="State" />
         </div>
         <div>
           Event type: <input name="event_type" type="text" placeholder="Corperate group" />

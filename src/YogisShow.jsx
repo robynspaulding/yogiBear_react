@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { BookingsIndex } from "./BookingsIndex";
 import { BookingsNew } from "./BookingsNew";
 
 export function YogisShow() {
@@ -21,7 +22,7 @@ export function YogisShow() {
       <h2>{yogi.name}</h2>
       <img src={yogi.image} width="500px" />
       <p>{yogi.bio}</p>
-      <p>Hourly Rate: {yogi.rate}</p>
+      <p>Hourly Rate: ${yogi.rate}</p>
       <p>Yoga Type: {yogi.yoga_type}</p>
       <p>
         Location: {yogi.city}, {yogi.state}
