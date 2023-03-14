@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-export function BookingsNew() {
+export function BookingsNew(props) {
   const idParams = useParams();
 
   const handleCreateBooking = (params) => {
@@ -22,7 +22,7 @@ export function BookingsNew() {
 
   return (
     <div>
-      <h1>Making a Booking</h1>
+      <h1>Book a session with {props.yogi.name}</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <input name="yogi_id" type="hidden" defaultValue={idParams.id} />
@@ -31,13 +31,13 @@ export function BookingsNew() {
           Date: <input name="date" type="text" />
         </div>
         <div>
-          Start time: <input name="start_time" type="text" />
+          Start time: <input name="start_time" type="text" placeholder={props.yogi.available_start_time} />
         </div>
         <div>
-          End time: <input name="end_time" type="text" />
+          End time: <input name="end_time" type="text" placeholder={props.yogi.available_end_time} />
         </div>
         <div>
-          Cost: <input name="total_price" type="text" />
+          Total: <input name="total_price" type="text" placeholder="rate * number of hours" />
         </div>
         <div>
           Address: <input name="address" type="text" />
@@ -49,16 +49,16 @@ export function BookingsNew() {
           State: <input name="state" type="text" />
         </div>
         <div>
-          Event type: <input name="event_type" type="text" />
+          Event type: <input name="event_type" type="text" placeholder="Corperate group" />
         </div>
         <div>
-          Your email address: <input name="email" type="text" />
+          Your email address: <input name="email" type="text" placeholder="your_name@email.com" />
         </div>
         <div>
-          Is the event in person: <input name="in_person" type="text" defaultChecked={true} />
+          In person: <input name="in_person" type="text" defaultValue="true" />
         </div>
         <div>
-          Paid: <input name="paid" type="text" defaultChecked={false} />
+          Paid: <input name="paid" type="text" defaultValue="false" />
         </div>
         <button type="submit">Create Booking</button>
       </form>
