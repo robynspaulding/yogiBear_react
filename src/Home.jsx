@@ -4,6 +4,7 @@ import { YogisIndex } from "./YogisIndex";
 import { YogisUpdate } from "./YogisUpdate";
 import { Modal } from "./Modal";
 import { YogisNew } from "./YogisNew";
+import { BookingsIndex } from "./BookingsIndex";
 
 export function Home() {
   const [yogis, setYogis] = useState([]);
@@ -55,6 +56,7 @@ export function Home() {
   };
 
   useEffect(handleIndexYogis, []);
+
   return (
     <div>
       <YogisIndex yogis={yogis} onSelectYogi={handleUpdateYogi} />

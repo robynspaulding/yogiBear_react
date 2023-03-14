@@ -15,6 +15,8 @@ export function Header() {
             <LogoutLink />
             <br />
             <a href="/yogis/new">Admin: Add New Yogi</a>
+            <br />
+            <a href="/bookings">View Your Bookings</a>
           </>
         )}
       </nav>

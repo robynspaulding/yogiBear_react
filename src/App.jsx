@@ -6,6 +6,7 @@ import { YogisShow } from "./YogisShow";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
 import { YogisNew } from "./YogisNew";
+import { BookingsIndex } from "./BookingsIndex";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/yogis/new" element={<YogisNew />} />
+        <Route path="/bookings" element={<BookingsIndex />} />
       </Routes>
       <Footer />
     </BrowserRouter>
