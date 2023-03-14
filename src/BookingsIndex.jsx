@@ -23,12 +23,9 @@ export function BookingsIndex() {
           </div>
           <div>
             Address: {booking.address}, {booking.city}, {booking.state}
-          </div>
-          <div>
-            Details:
-            <br /> event type: {booking.event_type}
-            <br /> in person: {booking.in_person.toString()}
-            <br /> paid: {booking.paid.toString()}
+            <br /> Event type: {booking.event_type}
+            <br /> In person: {booking.in_person.toString()}
+            <br /> Paid: {booking.paid.toString()}
           </div>
           <br />
         </div>
