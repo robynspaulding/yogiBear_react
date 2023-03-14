@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { YogisIndex } from "./YogisIndex";
 
 export function BookingsIndex(props) {
   const [bookings, setBookings] = useState([]);

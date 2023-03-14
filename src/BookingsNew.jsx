@@ -1,5 +1,8 @@
 import axios from "axios";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export function BookingsNew(props) {
   const idParams = useParams();
@@ -20,6 +23,8 @@ export function BookingsNew(props) {
     event.target.reset();
   };
 
+  const [startDate, setStartDate] = useState(new Date());
+
   return (
     <div>
       <h1>Book a session with {props.yogi.name}</h1>
@@ -30,8 +35,11 @@ export function BookingsNew(props) {
         <div>
           <input name="yogi_name" type="hidden" defaultValue={props.yogi.name} />
         </div>
-        <div>
+        {/* <div>
           Date: <input name="date" type="text" placeholder="Date" />
+        </div> */}
+        <div>
+          <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} value={startDate} name="date" />
         </div>
         <div>
           Start time: <input name="start_time" type="text" placeholder={props.yogi.available_start_time} />
