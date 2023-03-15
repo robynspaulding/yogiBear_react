@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { Button } from "react-bootstrap";
 
 export function Signup() {
   const [errors, setErrors] = useState([]);
@@ -42,7 +43,9 @@ export function Signup() {
         <div>
           Password confirmation: <input name="password_confirmation" type="password" />
         </div>
-        <button type="submit">Signup</button>
+        <Button variant="outline-success" size="sm" type="submit">
+          Create account
+        </Button>
       </form>
     </div>
   );

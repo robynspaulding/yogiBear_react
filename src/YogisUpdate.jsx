@@ -1,3 +1,5 @@
+import { Button } from "react-bootstrap";
+
 export function YogisUpdate(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -47,9 +49,13 @@ export function YogisUpdate(props) {
           Image: <input defaultValue={props.yogi.image} name="image" type="text" />
         </div>
 
-        <button type="submit">Update {props.yogi.name}'s Info</button>
+        <Button variant="outline-success" type="submit">
+          Update {props.yogi.name}'s Info
+        </Button>
         <br />
-        <button onClick={handleClick}>Delete {props.yogi.name}'s Profile</button>
+        <Button variant="outline-danger" onClick={handleClick}>
+          Delete {props.yogi.name}'s Profile
+        </Button>
       </form>
     </div>
   );

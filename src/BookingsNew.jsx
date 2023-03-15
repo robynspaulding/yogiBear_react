@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { Button } from "react-bootstrap";
 
 export function BookingsNew(props) {
   const idParams = useParams();
@@ -35,9 +36,6 @@ export function BookingsNew(props) {
         <div>
           <input name="yogi_name" type="hidden" defaultValue={props.yogi.name} />
         </div>
-        {/* <div>
-          Date: <input name="date" type="text" placeholder="Date" />
-        </div> */}
         <div>
           <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} value={startDate} name="date" />
         </div>
@@ -71,7 +69,9 @@ export function BookingsNew(props) {
         <div>
           Paid: <input name="paid" type="text" defaultValue="false" />
         </div>
-        <button type="submit">Create Booking</button>
+        <Button variant="outline-success" type="submit">
+          Create Booking
+        </Button>
       </form>
     </div>
   );

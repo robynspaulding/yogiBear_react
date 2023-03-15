@@ -1,11 +1,14 @@
 import { LogoutLink } from "./LogoutLink";
-import { Navbar, Nav, NavDropdown, Container, Button, Form } from "react-bootstrap";
-
+import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+import React from "react";
+import gummyyoga from "./assets/gummyyoga.jpeg";
 export function Header() {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/">YogiBear</Navbar.Brand>
+        <Navbar.Brand href="/">
+          <img alt="" src={gummyyoga} width="50" height="50" /> YogiBear
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: "100px" }} navbarScroll>

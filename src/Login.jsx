@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { Button } from "react-bootstrap";
 
 const jwt = localStorage.getItem("jwt");
 if (jwt) {
@@ -43,7 +44,9 @@ export function Login() {
         <div>
           Password: <input name="password" type="password" />
         </div>
-        <button type="submit">Login</button>
+        <Button variant="outline-success" size="sm" type="submit">
+          Login
+        </Button>
       </form>
     </div>
   );

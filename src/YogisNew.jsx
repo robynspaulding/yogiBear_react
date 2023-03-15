@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Button } from "react-bootstrap";
 
 export function YogisNew() {
   const handleCreateYogi = (params) => {
@@ -19,7 +20,7 @@ export function YogisNew() {
 
   return (
     <div>
-      <h1>New Yogi</h1>
+      <h2>Add A New YogiBear Instructor</h2>
       <form onSubmit={handleSubmit}>
         <div>
           Name: <input name="name" type="text" />
@@ -51,7 +52,9 @@ export function YogisNew() {
         <div>
           Image: <input name="image" type="text" />
         </div>
-        <button type="submit">Create Yogi Profile</button>
+        <Button variant="outline-success" type="submit">
+          Create Yogi Profile
+        </Button>
       </form>
     </div>
   );
