@@ -19,10 +19,11 @@ export function Header() {
               </>
             ) : (
               <>
+                <LogoutLink />
+                <Nav.Link href="/bookings">See your bookings</Nav.Link>
                 <NavDropdown title="Admin" id="navbarScrollingDropdown">
                   <NavDropdown.Item href="/yogis/new">Add New YogiBear Instructor</NavDropdown.Item>
                 </NavDropdown>
-                <LogoutLink />
               </>
             )}
           </Nav>

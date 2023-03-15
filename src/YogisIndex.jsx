@@ -22,7 +22,8 @@ export function YogisIndex(props) {
         .map((yogi) => (
           <div key={yogi.id}>
             <h2>{yogi.name}</h2>
-            {yogi.yoga_type} yoga <br />
+            Certified {yogi.yoga_type} yoga instructor
+            <br />
             <img width="500" src={yogi.image} />
             <br />
             <Link to={`/yogis/${yogi.id}`}>
