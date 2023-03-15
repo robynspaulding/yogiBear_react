@@ -17,7 +17,7 @@ export function YogisShow() {
   useEffect(handleShowYogi, []);
 
   return (
-    <div>
+    <div id="yogi-show">
       <h1>Yogi Info</h1>
       <h2>{yogi.name}</h2>
       <img src={yogi.image} width="500px" />
