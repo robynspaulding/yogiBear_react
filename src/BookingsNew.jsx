@@ -4,6 +4,9 @@ import { useParams } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Button } from "react-bootstrap";
+import homeLogo from "./assets/home-address.png";
+import eventLogo from "./assets/event.png";
+import emailLogo from "./assets/email.png";
 
 export function BookingsNew(props) {
   const idParams = useParams();
@@ -13,7 +16,7 @@ export function BookingsNew(props) {
     axios.post("http://localhost:3000/bookings.json", params).then((response) => {
       const newBooking = response.data;
       console.log("Booking created!", newBooking);
-      window.location.href = `/yogis/${idParams.id}`;
+      window.location.href = `/bookings`;
     });
   };
 
@@ -27,52 +30,106 @@ export function BookingsNew(props) {
   const [startDate, setStartDate] = useState(new Date());
 
   return (
-    <div>
-      <h1>Book a session with {props.yogi.name}</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <input name="yogi_id" type="hidden" defaultValue={idParams.id} />
-        </div>
-        <div>
-          <input name="yogi_name" type="hidden" defaultValue={props.yogi.name} />
-        </div>
-        <div>
-          <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} value={startDate} name="date" />
-        </div>
-        <div>
-          Start time: <input name="start_time" type="text" placeholder={props.yogi.available_start_time} />
-        </div>
-        <div>
-          End time: <input name="end_time" type="text" placeholder={props.yogi.available_end_time} />
-        </div>
-        <div>
-          Total: <input name="total_price" type="text" placeholder="rate * number of hours" />
-        </div>
-        <div>
-          Address: <input name="address" type="text" placeholder="address of event" />
-        </div>
-        <div>
-          City: <input name="city" type="text" placeholder="City " />
-        </div>
-        <div>
-          State: <input name="state" type="text" placeholder="State" />
-        </div>
-        <div>
-          Event type: <input name="event_type" type="text" placeholder="Corperate group" />
-        </div>
-        <div>
-          Your email address: <input name="email" type="text" placeholder="your_name@email.com" />
-        </div>
-        <div>
-          In person: <input name="in_person" type="text" defaultValue="true" />
-        </div>
-        <div>
-          Paid: <input name="paid" type="text" defaultValue="false" />
-        </div>
-        <Button variant="outline-success" type="submit">
-          Create Booking
-        </Button>
-      </form>
+    <div className="card text-left col-2 shadow m-3" style={{ width: "18rem" }}>
+      <div className="row justify-content-left">
+        <h5 className="card-header">Book a session with {props.yogi.name}</h5>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <input name="yogi_id" type="hidden" defaultValue={idParams.id} />
+          </div>
+          <div>
+            <input name="yogi_name" type="hidden" defaultValue={props.yogi.name} />
+          </div>
+          <div>
+            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} value={startDate} name="date" />
+          </div>
+          <br />
+          <div class="input-group  input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">
+              Start
+            </span>
+            <div class="form-floating">
+              <input name="start_time" type="text" class="form-control" id="floatingInputGroup1" />
+              <label for="floatingInputGroup1">{props.yogi.available_start_time}</label>
+            </div>
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">
+              End
+            </span>
+            <div class="form-floating">
+              <input name="end_time" type="text" class="form-control" id="floatingInputGroup1" />
+              <label for="floatingInputGroup1">Total</label>
+            </div>
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">
+              $
+            </span>
+            <div class="form-floating">
+              <input name="total_price" type="text" class="form-control" id="floatingInputGroup1" />
+              <label for="floatingInputGroup1">Total</label>
+            </div>
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">
+              {" "}
+              <img src={homeLogo} width="20px" />
+            </span>
+            <div class="form-floating">
+              <input name="address" type="text" class="form-control" id="floatingInputGroup1" />
+              <label for="floatingInputGroup1">Address</label>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <span class="input-group-text">City and State</span>
+            <input name="city" type="text" aria-label="city" class="form-control" />
+            <input name="state" type="text" aria-label="State" class="form-control" />
+          </div>
+          <br />
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">
+              {" "}
+              <img src={eventLogo} width="20px" />
+            </span>
+            <div class="form-floating">
+              <input name="event_type" type="text" class="form-control" id="floatingInputGroup1" />
+              <label for="floatingInputGroup1">Event type</label>
+            </div>
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">
+              {" "}
+              <img src={emailLogo} width="20px" />
+            </span>
+            <div class="form-floating">
+              <input name="email" type="text" class="form-control" id="floatingInputGroup1" />
+              <label for="floatingInputGroup1">email address</label>
+            </div>
+          </div>
+
+          <select name="in_person" type="text" class="form-select" aria-label="Default select example">
+            <option selected>Is your event in person:</option>
+            <option value="true">Yes</option>
+            <option value="false">No, online</option>
+          </select>
+
+          <select name="paid" type="text" class="form-select" aria-label="Default select example">
+            <option selected>Have you paid:</option>
+            <option value="true">Yes</option>
+            <option value="false">Not yet</option>
+          </select>
+
+          <Button variant="outline-success" type="submit">
+            Create Booking
+          </Button>
+        </form>
+      </div>
     </div>
   );
 }

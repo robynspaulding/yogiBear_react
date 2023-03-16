@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { BookingsIndex } from "./BookingsIndex";
 import { BookingsNew } from "./BookingsNew";
 
 export function YogisShow() {
@@ -17,21 +16,29 @@ export function YogisShow() {
   useEffect(handleShowYogi, []);
 
   return (
-    <div id="yogi-show">
-      <h1>Yogi Info</h1>
-      <h2>{yogi.name}</h2>
-      <img src={yogi.image} width="500px" />
-      <p>{yogi.bio}</p>
-      <p>Hourly Rate: ${yogi.rate}</p>
-      <p>Yoga Type: {yogi.yoga_type}</p>
-      <p>
-        Location: {yogi.city}, {yogi.state}
-      </p>
+    <div id="yogi-show" className="row justify-content-center">
+      <h1>YogiBear Instructor Info</h1>
       <br />
-      Times available during the week:
       <br />
-      {yogi.available_start_time} - {yogi.available_end_time}
-      <p>For alternate times please contact the Yogi directly - {yogi.contact}</p>
+      <br />
+      <br />
+      <br />
+
+      <div className="card col-2 shadow m-3" style={{ width: "40rem" }}>
+        <h2 className="card-title">{yogi.name}</h2>
+        <img src={yogi.image} width="500px" />
+        <p>{yogi.bio}</p>
+        <p>Hourly Rate: ${yogi.rate}</p>
+        <p>Yoga Type: {yogi.yoga_type}</p>
+        <p>
+          Location: {yogi.city}, {yogi.state}
+        </p>
+        <br />
+        Times available during the week:
+        <br />
+        {yogi.available_start_time} - {yogi.available_end_time}
+        <p>For alternate times please contact the Yogi directly - {yogi.contact}</p>
+      </div>
       <BookingsNew yogi={yogi} />
     </div>
   );
