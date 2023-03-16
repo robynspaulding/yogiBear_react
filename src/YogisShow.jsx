@@ -27,10 +27,12 @@ export function YogisShow() {
       <div className="card col-2 shadow m-3" style={{ width: "40rem" }}>
         <h2 className="card-title">{yogi.name}</h2>
         <img src={yogi.image} width="500px" />
+        <br />
         <p>{yogi.bio}</p>
-        <p>Hourly Rate: ${yogi.rate}</p>
-        <p>Yoga Type: {yogi.yoga_type}</p>
-        <p>
+        <p className="row justify-content-center">Hourly Rate: ${yogi.rate}</p>
+        <p className="row justify-content-center">Yoga Type: {yogi.yoga_type}</p>
+        <p className="row justify-content-center">
+          {" "}
           Location: {yogi.city}, {yogi.state}
         </p>
         <br />
