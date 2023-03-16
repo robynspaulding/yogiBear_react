@@ -3,6 +3,7 @@ import axios from "axios";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import moment from "moment";
 
 export function BookingsIndex(props) {
   const [bookings, setBookings] = useState([]);
@@ -24,7 +25,7 @@ export function BookingsIndex(props) {
             <Card style={{ width: "20rem" }}>
               <div class="card-header">Yoga Instructor: {booking.yogi_name}</div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Date: {booking.date}</li>
+                <li class="list-group-item">Date: {moment(booking.date).format("LL")}</li>
                 <li class="list-group-item">
                   Time: {booking.start_time}-{booking.end_time}
                 </li>
