@@ -1,5 +1,11 @@
 import axios from "axios";
 import { Button } from "react-bootstrap";
+import nameLogo from "./assets/name.png";
+import moneyLogo from "./assets/dollar-currency-symbol.png";
+import yogaLogo from "./assets/yoga-position.png";
+import bioLogo from "./assets/bio.png";
+import contactLogo from "./assets/contact.png";
+import imageLogo from "./assets/person.png";
 
 export function YogisNew() {
   const handleCreateYogi = (params) => {
@@ -21,40 +27,108 @@ export function YogisNew() {
   return (
     <div>
       <h2>Add A New YogiBear Instructor</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          Name: <input name="name" type="text" />
+      <form onSubmit={handleSubmit} className="row justify-content-center">
+        <div className="card" style={{ width: "40rem" }}>
+          <div class="input-group input-group-sm flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">
+              <img width="30px" src={nameLogo} />
+            </span>
+            <input
+              name="name"
+              type="text"
+              class="form-control"
+              placeholder="Yogi name"
+              aria-label="name"
+              aria-describedby="addon-wrapping"
+            />
+          </div>
+
+          <div class="input-group input-group-sm flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">
+              <img width="30px" src={imageLogo} />
+            </span>
+            <input
+              name="image"
+              type="text"
+              class="form-control"
+              placeholder="profile photo / image url"
+              aria-label="image"
+              aria-describedby="addon-wrapping"
+            />
+          </div>
+
+          <div class="input-group input-group-sm flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">
+              <img width="20px" src={moneyLogo} />
+            </span>
+            <input
+              name="rate"
+              type="text"
+              class="form-control"
+              placeholder="Hourly rate"
+              aria-label="rate"
+              aria-describedby="addon-wrapping"
+            />
+          </div>
+
+          <div class="input-group input-group-sm flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">
+              <img width="20px" src={yogaLogo} />
+            </span>
+            <input
+              name="yoga_type"
+              type="text"
+              class="form-control"
+              placeholder="Yoga specialty"
+              aria-label="yaga_type"
+              aria-describedby="addon-wrapping"
+            />
+          </div>
+
+          <div className="input-group input-group-sm flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">
+              <img width="20px" src={bioLogo} />
+            </span>
+            <input
+              name="bio"
+              type="text"
+              class="form-control"
+              placeholder="Bio"
+              aria-label="bio"
+              aria-describedby="addon-wrapping"
+            />
+          </div>
+
+          <div class="input-group input-group-sm flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">
+              <img width="20px" src={contactLogo} />
+            </span>
+            <input
+              name="contact"
+              type="text"
+              class="form-control"
+              placeholder="Contact info"
+              aria-label="contact"
+              aria-describedby="addon-wrapping"
+            />
+          </div>
+
+          <div class="input-group">
+            <span class="input-group-text">City and State</span>
+            <input name="city" type="text" aria-label="city" class="form-control" />
+            <input name="state" type="text" aria-label="state" class="form-control" />
+          </div>
+
+          <div class="input-group">
+            <span class="input-group-text">Avalliable Start and End Times</span>
+            <input name="available_start_time" type="text" aria-label="available_start_time" class="form-control" />
+            <input name="available_end_time" type="text" aria-label="available_end_time" class="form-control" />
+          </div>
+
+          <Button variant="outline-success" type="submit">
+            Create Yogi Profile
+          </Button>
         </div>
-        <div>
-          Rate: <input name="rate" type="text" />
-        </div>
-        <div>
-          Yoga type: <input name="yoga_type" type="text" />
-        </div>
-        <div>
-          About: <input name="bio" type="text" />
-        </div>
-        <div>
-          Contact: <input name="contact" type="text" />
-        </div>
-        <div>
-          State: <input name="state" type="text" />
-        </div>
-        <div>
-          City: <input name="city" type="text" />
-        </div>
-        <div>
-          Available start time: <input name="available_start_time" type="text" />
-        </div>
-        <div>
-          Available end time: <input name="available_end_time" type="text" />
-        </div>
-        <div>
-          Image: <input name="image" type="text" />
-        </div>
-        <Button variant="outline-success" type="submit">
-          Create Yogi Profile
-        </Button>
       </form>
     </div>
   );

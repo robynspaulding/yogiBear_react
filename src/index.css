@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 margin: 1em;
 }
-
-.index-cards {
-  align-content: center;
+#root {
+  background-image: url('./assets/mandala.png');
 }
+
