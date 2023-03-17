@@ -28,7 +28,7 @@ export function YogisNew() {
     <div>
       <h2>Add A New YogiBear Instructor</h2>
       <form onSubmit={handleSubmit} className="row justify-content-center">
-        <div className="card" style={{ width: "40rem" }}>
+        <div className="card shadow m-3" style={{ width: "40rem" }}>
           <div class="input-group input-group-sm flex-nowrap">
             <span class="input-group-text" id="addon-wrapping">
               <img width="30px" src={nameLogo} />

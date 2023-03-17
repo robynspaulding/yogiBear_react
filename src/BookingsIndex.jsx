@@ -22,7 +22,7 @@ export function BookingsIndex(props) {
       <Row xs={2} md={3} className="g-4">
         {bookings.map((booking) => (
           <Col key={booking.id}>
-            <Card style={{ width: "20rem" }}>
+            <Card className="card shadow m-3" style={{ width: "20rem" }}>
               <div class="card-header">Yoga Instructor: {booking.yogi_name}</div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">Date: {moment(booking.date).format("LL")}</li>

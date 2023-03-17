@@ -26,7 +26,7 @@ export function YogisIndex(props) {
               <Card style={{ width: "25rem" }} key={yogi.id} className="card col-2 shadow m-3">
                 <Card.Title>{yogi.name}</Card.Title>
                 <Card.Img variant="top" width="500" src={yogi.image} />
-                <Card.Text>
+                <Card.Text align="center">
                   Certified {yogi.yoga_type} yoga instructor
                   <br />
                   <Link to={`/yogis/${yogi.id}`}>

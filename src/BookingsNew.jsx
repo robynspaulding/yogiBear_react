@@ -50,7 +50,7 @@ export function BookingsNew(props) {
             </span>
             <div class="form-floating">
               <input name="start_time" type="text" class="form-control" id="floatingInputGroup1" />
-              <label for="floatingInputGroup1">{props.yogi.available_start_time}</label>
+              <label for="floatingInputGroup1">available {props.yogi.available_start_time}</label>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ export function BookingsNew(props) {
             </span>
             <div class="form-floating">
               <input name="end_time" type="text" class="form-control" id="floatingInputGroup1" />
-              <label for="floatingInputGroup1">Total</label>
+              <label for="floatingInputGroup1">available {props.yogi.available_end_time}</label>
             </div>
           </div>
 
@@ -126,7 +126,7 @@ export function BookingsNew(props) {
           </select>
 
           <Button variant="outline-success" type="submit">
-            Create Booking
+            Book Session
           </Button>
         </form>
       </div>
