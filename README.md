@@ -3,7 +3,7 @@ React.js Frontend
 
  YogiBear is a booking sight for Yoga Instructors. A user can create an account and book a session with their favorite Yogi. A user can also see all the sessions they have booked and keep track of their charges. An Admin user can add or remove a Yoga instructor to the database, edit instructor information and create their own bookings.
  
-<img src="src/images/YogiBearIndex.png" width="500" height="500"/> 
+<img src="src/assets/YogiBearIndex.png"  height="500"/> 
 
 # Technology used:
 
