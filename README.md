@@ -38,3 +38,20 @@ You can view the app on http://localhost:5173.
 ## Future Plans
 
 - host page through Vercel 
+
+## Icon Attribution
+
+credit to Flaticon.com and their awesome artists for the great images I used in my project: 
+
+- nameLogo: <a href="https://www.flaticon.com/free-icons/name" title="name icons">Name icons created by Freepik - Flaticon</a>
+- homeLogo: <a href="https://www.flaticon.com/free-icons/address" title="address icons">Address icons created by Vectors Tank - Flaticon</a>
+- eventLogo: <a href="https://www.flaticon.com/free-icons/event" title="event icons">Event icons created by Freepik - Flaticon</a>
+- emailLogo: <a href="https://www.flaticon.com/free-icons/email" title="email icons">Email icons created by Those Icons - Flaticon</a>
+- moneyLogo: <a href="https://www.flaticon.com/free-icons/dollar-sign" title="dollar sign icons">Dollar sign icons created by Freepik - Flaticon</a>
+- yogaLogo: <a href="https://www.flaticon.com/free-icons/meditation" title="meditation icons">Meditation icons created by Freepik - Flaticon</a>
+- bioLogo: <a href="https://www.flaticon.com/free-icons/portfolio" title="portfolio icons">Portfolio icons created by Freepik - Flaticon</a>
+- contactLogo: <a href="https://www.flaticon.com/free-icons/contact-us" title="contact us icons">Contact us icons created by sohel778 - Flaticon</a>
+- imageLogo: <a href="https://www.flaticon.com/free-icons/person-outline" title="person outline icons">Person outline icons created by Cedric17 - Flaticon</a>
+- passwordLogo: <a href="https://www.flaticon.com/free-icons/password" title="password icons">Password icons created by Gregor Cresnar - Flaticon</a>
+- background image: https://img.freepik.com/premium-vector/round-frame-simple-template-background_1159-26622.jpg?w=360
+
